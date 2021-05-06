@@ -35,7 +35,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh '/usr/local/bin/helm upgrade --install guestbook ./guestbook-deployment --namespace development --set image.tag="${env.BUILD_NUMBER}"'
+                sh '/usr/local/bin/helm upgrade --install guestbook ./guestbook-deployment --namespace development --set image.tag="${BUILD_NUMBER}"'
             }
         }
        
