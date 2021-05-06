@@ -11,5 +11,5 @@ RUN sed -i 's#ErrorLog /proc/self/fd/2#ErrorLog "|$/bin/cat 1>\&2"#' /etc/apache
 RUN sed -i 's#CustomLog /proc/self/fd/1 combined#CustomLog "|/bin/cat" combined#' /etc/apache2/apache2.conf
 
 ADD guestbook/guestbook.php /var/www/html/guestbook.php
-ADD guestbook/controllers.js /var/www/html/controllers.js
+ADD guestbook/controller.js /var/www/html/controllers.js
 ADD guestbook/index.html /var/www/html/index.html
