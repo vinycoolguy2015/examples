@@ -29,13 +29,6 @@ pipeline {
                 }
             }
         }
-       stage('Deployment') {
-            when {
-                branch 'master'
-            }
-            steps {
-                sh helm upgrade --install guestbook ./guestbook-deployment --namespace development
-            }
-        }
+       
     }
 }
