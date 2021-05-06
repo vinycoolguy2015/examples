@@ -35,7 +35,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh 'helm upgrade --install guestbook ./guestbook-deployment --namespace development'
+                sh '/usr/local/bin/helm upgrade --install guestbook ./guestbook-deployment --namespace development'
             }
         }
        
